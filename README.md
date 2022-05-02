@@ -1,4 +1,4 @@
-# Volta
+# Parea
 
 ![icon](icon.png)
 
