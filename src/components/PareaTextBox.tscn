@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/components/PareaTextBox.gd" type="Script" id=1]
 
 [node name="PareaTextBox" type="VBoxContainer"]
 anchor_right = 1.0
@@ -6,6 +8,7 @@ anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
+script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_top = 440.0
@@ -16,14 +19,15 @@ rect_min_size = Vector2( 0, 160 )
 [node name="Margin" type="MarginContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
 
 [node name="Label" type="RichTextLabel" parent="Panel/Margin"]
-margin_right = 1004.0
-margin_bottom = 140.0
+margin_right = 992.0
+margin_bottom = 128.0
+rect_clip_content = false
 bbcode_enabled = true
-bbcode_text = "Hello world."
-text = "Hello world."
+bbcode_text = "This is just very cool."
+text = "This is just very cool."
