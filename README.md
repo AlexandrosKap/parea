@@ -12,7 +12,7 @@ Godot version: 3.4.4
 - Pause before a line
 - Pick one line or play all from a set
 - Play a line sequentially or randomly
-- Play aniamtion(s) to go with the line
+- Play animation(s) to go with the line
 
 ## System
 
@@ -20,15 +20,11 @@ Godot version: 3.4.4
 - Dhall as a scripting language
 
 ## Data
-
 ```dhall
-let Line =
-    { code   : Text
-    , number : Natural
-    , scene  : Text
-    , text   : Text
-    , title  : Text
-    }
-
-in  Line
+{ code   : Text
+, name   : Text
+, number : Natural
+, scene  : Text
+, text   : Text
+}
 ```

@@ -1,0 +1,3 @@
+{ lostWoods = "LWODS"
+, starPlanet = "STARPL"
+}
