@@ -22,33 +22,13 @@ Godot version: 3.4.4
 ## Data
 
 ```dhall
--- line.dhall
-
 let Line =
-    { scene     : Text      -- wod
-    , actor     : Text      -- alx
-    , pause     : Double    -- 0.0
-    , number    : Natural   -- 22
-    , text      : Text      -- "This is just very cool."
-    , animation : Text      -- "intro"
-    , code      : Text      -- "wod-number-alx"
+    { code   : Text
+    , number : Natural
+    , scene  : Text
+    , text   : Text
+    , title  : Text
     }
 
-let line =
-    \(scene : Text) ->
-        \(actor : Text) ->
-            \(pause : Double) ->
-                \(number : Natural) ->
-                    \(text : Text) ->
-                        \(animation : Text) ->
-                            { scene
-                            , actor
-                            , pause
-                            , number
-                            , text
-                            , animation
-                            , code = "${scene}${Natural/show number}${actor}"
-                            } : Line
-
-in  line
+in  Line
 ```
