@@ -2,22 +2,19 @@ extends Control
 
 onready var text_box := $PareaTextBox
 
-func print_dialogue_line(line: Dictionary) -> void:
-	print(
-		"(%s) (%s)\n\"%s\"\n" %
-		[line["category"], line["name"], line["text"]]
-	)
-
 func show_menu() -> void:
 	pass
 
 func hide_menu() -> void:
 	pass
 
-func show_dialogue(dialogue: Array) -> void:
-	for line in dialogue:
-		print_dialogue_line(line)
-		text_box.add_text(line["text"] + "\n")
+func show_dialogue(dialogue_lines: Array) -> void:
+	var is_first = true
+	for dialogue_line in dialogue_lines:
+		if not is_first:
+			text_box.add_text(dialogue_line[4] + "\n")
+		else:
+			is_first = false
 
 func hide_dialogue() -> void:
 	pass

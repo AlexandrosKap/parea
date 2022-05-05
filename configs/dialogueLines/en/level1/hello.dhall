@@ -1,7 +1,7 @@
-let db = ../Database/package.dhall
+let lib = ../../package.dhall
 
-let say = db.newLine "${db.scenes.level1}"
-let red = say "${db.names.red}"
+let say = lib.newLine "${lib.scenes.level1}"
+let red = say "${lib.names.red}"
 
 in  [ red "Hello world."
     , red ''

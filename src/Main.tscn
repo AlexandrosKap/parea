@@ -7,6 +7,6 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-path = "res://configurations/dialogues/hello.dhall.json"
+path = "res://configs/dialogueLines/en/en.fcsv"
 
 [node name="Parea" parent="." instance=ExtResource( 1 )]

@@ -2,11 +2,11 @@ code,name,number,scene,text
 GRN0LEV1,GRN,0,LEV1,[shake]The name of this node is...[/shake]
 GRN1LEV1,GRN,1,LEV1,[wave]Green Bob.[/wave]
 GRN2LEV1,GRN,2,LEV1,[rainbow]The end.[/rainbow]
-GRN3LEV2,GRN,3,LEV2,[wave]My name is Green Mominpappa.[/wave]
-RED4LEV1,RED,4,LEV1,Hello world.
-RED5LEV1,RED,5,LEV1,"[wave]This is a big Big BIG line and
+RED3LEV1,RED,3,LEV1,Hello world.
+RED4LEV1,RED,4,LEV1,"[wave]This is a big Big BIG line and
 has many Many MANY characters.[/wave]"
-RED6LEV1,RED,6,LEV1,Thanks for clicking me.
-RED7LEV1,RED,7,LEV1,[shake]I love you.[/shake]
-RED8LEV1,RED,8,LEV1,Bye.
+RED5LEV1,RED,5,LEV1,Thanks for clicking me.
+RED6LEV1,RED,6,LEV1,[shake]I love you.[/shake]
+RED7LEV1,RED,7,LEV1,Bye.
+GRN8LEV2,GRN,8,LEV2,[wave]My name is Green Mominpappa.[/wave]
 RED9LEV2,RED,9,LEV2,[wave]My name is Red Mominpappa.[/wave]

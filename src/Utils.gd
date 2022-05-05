@@ -1,6 +1,5 @@
 extends Reference
 
-# Read a json file.
 # An empty dictionary is returned if the path or file is invalid.
 static func read_json(path: String) -> Dictionary:
 	var result := {}
@@ -14,5 +13,20 @@ static func read_json(path: String) -> Dictionary:
 			assert(false, "Can't parse file.")
 		else:
 			result = json.result
+		file.close()
+	return result
+
+# An empty array is returned if the path or file is invalid.
+static func read_csv(path: String) -> Array:
+	var result := []
+	var file := File.new()
+	var err := file.open(path, File.READ)
+	if err:
+		assert(false, "Can't open file.")
+	else:
+		while not file.eof_reached():
+			var csv_line := file.get_csv_line()
+			if len(csv_line) != 1: # Bruh...
+				result.append(csv_line)
 		file.close()
 	return result
