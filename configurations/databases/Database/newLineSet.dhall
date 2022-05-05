@@ -24,7 +24,7 @@ let fromIndexedLineToLine
     : IndexedLine -> Line
     =
     \(indexedLine : IndexedLine) ->
-        { code = "${indexedLine.value.name}-${Natural/show indexedLine.index}-${indexedLine.value.scene}"
+        { code = "${indexedLine.value.name}${Natural/show indexedLine.index}${indexedLine.value.scene}"
         , number = indexedLine.index
         , scene = indexedLine.value.scene
         , name = indexedLine.value.name

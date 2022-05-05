@@ -20,10 +20,12 @@ for database in $(ls $databases); do
         temp="$dir/$database.dhall"
         output="$dir/$database.csv"
 
-        # Create a temp dhall file with all the line sets.
+        # Create a temp dhall file that contains every dhall file.
         echo '../Database/newLineSet.dhall (' > $temp
+        has_files=''
         for file in $dir/*; do
             if [ $file != $temp ] && [ $file != $output ]; then
+                has_files='1'
                 dhall --file $file >> $temp
                 echo '#' >> $temp
                 echo "Normalized: $file"
@@ -32,8 +34,10 @@ for database in $(ls $databases); do
         echo '([ ] : List ../Database/Line.dhall))' >> $temp
         
         # Transpile the temp dhall file to a csv file.
-        dhall-to-csv --file $temp --output $output
-        printf "Transpiled: $temp\n\n"
+        if [ -n "$has_files" ]; then
+            dhall-to-csv --file $temp --output $output
+            printf "Transpiled: $temp\n\n"
+        fi
         rm $temp
     fi
 done

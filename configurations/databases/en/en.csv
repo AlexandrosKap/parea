@@ -1,12 +1,12 @@
 code,name,number,scene,text
-GRN-0-LEV1G,GRN,0,LEV1G,[shake]The name of this node is...[/shake]
-GRN-1-LEV1G,GRN,1,LEV1G,[wave]Green Bob.[/wave]
-GRN-2-LEV1G,GRN,2,LEV1G,[rainbow]The end.[/rainbow]
-GRN-3-LEV2G,GRN,3,LEV2G,[wave]My name is Green Mominpappa.[/wave]
-RED-4-LEV1R,RED,4,LEV1R,Hello world.
-RED-5-LEV1R,RED,5,LEV1R,"[wave]This is a big Big BIG line and
+GRN0LEV1G,GRN,0,LEV1G,[shake]The name of this node is...[/shake]
+GRN1LEV1G,GRN,1,LEV1G,[wave]Green Bob.[/wave]
+GRN2LEV1G,GRN,2,LEV1G,[rainbow]The end.[/rainbow]
+GRN3LEV2G,GRN,3,LEV2G,[wave]My name is Green Mominpappa.[/wave]
+RED4LEV1R,RED,4,LEV1R,Hello world.
+RED5LEV1R,RED,5,LEV1R,"[wave]This is a big Big BIG line and
 has many Many MANY characters.[/wave]"
-RED-6-LEV1R,RED,6,LEV1R,Thanks for clicking me.
-RED-7-LEV1R,RED,7,LEV1R,[shake]I love you.[/shake]
-RED-8-LEV1R,RED,8,LEV1R,Bye.
-RED-9-LEV2R,RED,9,LEV2R,[wave]My name is Red Mominpappa.[/wave]
+RED6LEV1R,RED,6,LEV1R,Thanks for clicking me.
+RED7LEV1R,RED,7,LEV1R,[shake]I love you.[/shake]
+RED8LEV1R,RED,8,LEV1R,Bye.
+RED9LEV2R,RED,9,LEV2R,[wave]My name is Red Mominpappa.[/wave]
