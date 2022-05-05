@@ -2,12 +2,12 @@ code,name,number,scene,text
 GRN-0-LEV1G,GRN,0,LEV1G,[shake]Το όνομα αυτού του κόμβου είναι...[/shake]
 GRN-1-LEV1G,GRN,1,LEV1G,[wave]Πράσινος Μπόμπ.[/wave]
 GRN-2-LEV1G,GRN,2,LEV1G,[rainbow]Τέλος.[/rainbow]
-GRN-0-LEV2G,GRN,0,LEV2G,[wave]Με λένε Green Mominpappa.[/wave]
-RED-0-LEV1R,RED,0,LEV1R,Γειά σου κόσμε.
-RED-1-LEV1R,RED,1,LEV1R,"[wave]Αυτή είναι μια μεγάλη Μεγάλη
+GRN-3-LEV2G,GRN,3,LEV2G,[wave]Με λένε Green Mominpappa.[/wave]
+RED-4-LEV1R,RED,4,LEV1R,Γειά σου κόσμε.
+RED-5-LEV1R,RED,5,LEV1R,"[wave]Αυτή είναι μια μεγάλη Μεγάλη
 ΜΕΓΆΛΗ γραμμή και έχει πολλούς
 Πολλούς ΠΟΛΛΟΎΣ χαρακτήρες.[/wave]"
-RED-2-LEV1R,RED,2,LEV1R,Ευχαριστώ που έκανες κλίκ.
-RED-3-LEV1R,RED,3,LEV1R,[shake]Σ'Αγαπώ.[/shake]
-RED-4-LEV1R,RED,4,LEV1R,Αντίο.
-RED-0-LEV2R,RED,0,LEV2R,[wave]Με λένε Red Snoofkin.[/wave]
+RED-6-LEV1R,RED,6,LEV1R,Ευχαριστώ που έκανες κλίκ.
+RED-7-LEV1R,RED,7,LEV1R,[shake]Σ'Αγαπώ.[/shake]
+RED-8-LEV1R,RED,8,LEV1R,Αντίο.
+RED-9-LEV2R,RED,9,LEV2R,[wave]Με λένε Red Snoofkin.[/wave]

@@ -3,8 +3,7 @@ let db = ../Database/package.dhall
 let say = db.newLine "${db.scenes.redLevel1}"
 let red = say "${db.names.red}"
 
-in  db.newLineSet
-    [ red "Hello world."
+in  [ red "Hello world."
     , red ''
     [wave]This is a big Big BIG line and
     has many Many MANY characters.[/wave]''
