@@ -1,12 +1,12 @@
 code,name,number,scene,text
-GRN0LEV1,GRN,0,LEV1,[shake]The name of this node is...[/shake]
-GRN1LEV1,GRN,1,LEV1,[wave]Green Bob.[/wave]
-GRN2LEV1,GRN,2,LEV1,[rainbow]The end.[/rainbow]
-RED3LEV1,RED,3,LEV1,Hello world.
-RED4LEV1,RED,4,LEV1,"[wave]This is a big Big BIG line and
+level1/bob0,GRN,0,LEV1,[shake]The name of this node is...[/shake]
+level1/bob1,GRN,1,LEV1,[wave]Green Bob.[/wave]
+level1/bob2,GRN,2,LEV1,[rainbow]The end.[/rainbow]
+level1/hello0,RED,0,LEV1,[rainbow]Hello world.[/rainbow]
+level1/hello1,RED,1,LEV1,"[wave]This is a big Big BIG line and
 has many Many MANY characters.[/wave]"
-RED5LEV1,RED,5,LEV1,Thanks for clicking me.
-RED6LEV1,RED,6,LEV1,[shake]I love you.[/shake]
-RED7LEV1,RED,7,LEV1,Bye.
-GRN8LEV2,GRN,8,LEV2,[wave]My name is Green Mominpappa.[/wave]
-RED9LEV2,RED,9,LEV2,[wave]My name is Red Mominpappa.[/wave]
+level1/hello2,RED,2,LEV1,Thanks for clicking me.
+level1/hello3,RED,3,LEV1,[shake]I love you.[/shake]
+level1/hello4,RED,4,LEV1,Bye.
+level2/greenName0,GRN,0,LEV2,[wave]My name is Green Mominpappa.[/wave]
+level2/redName0,RED,0,LEV2,[wave]My name is Red Mominpappa.[/wave]

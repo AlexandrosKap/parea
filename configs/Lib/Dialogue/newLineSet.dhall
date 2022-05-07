@@ -20,25 +20,44 @@ let IndexedLine =
     , value : Line
     }
 
-let fromIndexedLineToLine
-    : IndexedLine -> Line
-    =
+let fromIndexedLineToLine : IndexedLine -> Line =
     \(indexedLine : IndexedLine) ->
-        { code = "${indexedLine.value.name}${Natural/show indexedLine.index}${indexedLine.value.scene}"
+        { code = "${Natural/show indexedLine.index}${indexedLine.value.code}"
         , number = indexedLine.index
         , scene = indexedLine.value.scene
         , name = indexedLine.value.name
         , text = indexedLine.value.text
-        } : Line
+        }
 
-let newLineSet
-    : List Line -> List Line
-    =
+let addPathToLine : Text -> Line -> Line =
+    \(path : Text) ->
+    \(line : Line) ->
+        { code = "${path}${line.code}"
+        , name = line.name
+        , number = line.number
+        , scene = line.scene
+        , text = line.text
+        }
+
+let newLineSet : Text -> List Line -> List Line =
+    \(path : Text) ->
     \(lines : List Line) ->
-        map
-        IndexedLine
-        Line
-        fromIndexedLineToLine
-        (List/indexed Line lines)
+        let addPathToLine = addPathToLine path
+
+        let part1 =
+            map
+            IndexedLine
+            Line
+            fromIndexedLineToLine
+            (List/indexed Line lines)
+
+        let part2 =
+            map
+            Line
+            Line
+            addPathToLine
+            part1
+
+        in  part2
 
 in  newLineSet

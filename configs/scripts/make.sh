@@ -44,16 +44,23 @@ collect_dhall() {
 # Create csv files for the dialogue database.
 do_dialogue() {
     # Create a temp dhall file that contains every dhall file.
-    echo '(./package.dhall).newLineSet (' > $temp
+    echo 'let lib = ./package.dhall' > $temp
+    echo 'let Line = lib.Line' >> $temp
+    echo 'let newLineSet = lib.newLineSet' >> $temp
+    echo 'in' >> $temp
+
     has_files=''
     for file in $(collect_dhall $dir); do
         has_files='1'
+        line_path="${file#$dir/}"
+        line_path="${line_path%.dhall}"
+        echo "(newLineSet \"$line_path\"" >> $temp
         dhall --file $file >> $temp
-        echo '#' >> $temp
+        echo ')#' >> $temp
         echo "Normalized: $file"
     done
-    echo '([ ] : List (./package.dhall).Line))' >> $temp
-    
+    echo '([ ] : List Line)' >> $temp
+
     # Transpile the temp dhall file to a csv file.
     if [ -n "$has_files" ]; then
         dhall-to-csv --file $temp --output $output
