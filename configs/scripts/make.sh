@@ -17,8 +17,8 @@
 #   - temp   : The temporary dhall file used to store the contents of all dhall files in dir
 #   - output : The csv file
 
-# The temporary dhall file is created inside the database directory.
-# Example: ./database/en.dhall is created for ./database/en/
+# The temporary dhall file and the csv is created inside the database directory.
+# Example: ./database/en.dhall and ./database/en.csv is created for ./database/en/
 # ---
 
 databases='./dialogue'
@@ -77,7 +77,7 @@ main() {
             for part in $(ls $database); do
                 dir="$database/$part"
                 temp="$database/$part.dhall"
-                output="$dir/$part.$extension"
+                output="$database/$part.$extension"
                 if [ -d "$dir" ]; then
                     case "$database" in
                         './dialogue' ) do_dialogue;;

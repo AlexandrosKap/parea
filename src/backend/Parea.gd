@@ -25,3 +25,10 @@ func get_lines(set: String) -> Array:
 		code = set + str(number)
 	assert(len(result), "Result is empty.")
 	return result
+
+func get_random_line(set: String) -> Array:
+	var lines := get_lines(set)
+	return lines[randi() % len(lines)]
+
+func get_random_set(sets: Array) -> Array:
+	return sets[randi() % len(sets)]
