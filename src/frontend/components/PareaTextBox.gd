@@ -4,7 +4,6 @@ extends VBoxContainer
 var __old_visible_characters := 0
 
 var text_speed := 24.0
-
 onready var label: RichTextLabel = $Panel/Margin/Label
 
 # Hide default text.

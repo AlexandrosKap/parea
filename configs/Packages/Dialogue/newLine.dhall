@@ -5,9 +5,10 @@ let newLine : Text -> Text -> Text -> Line =
     \(name  : Text) ->
     \(text  : Text) ->
         { code = ""
+        , name
         , number = 0
         , scene
-        , name
+        , set = ""
         , text
         }
 
