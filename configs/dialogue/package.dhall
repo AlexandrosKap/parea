@@ -1,2 +1,2 @@
 -- Helper file to avoid .. that .. this.
-../Lib/Dialogue/package.dhall
+../Packages/Dialogue/package.dhall

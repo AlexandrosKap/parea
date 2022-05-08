@@ -2,17 +2,19 @@ extends Control
 
 enum {NAME, NUMBER, SCENE, TEXT}
 
+var parea = preload("../backend/Parea.gd").new()
+export(String, FILE, "*.fcsv") var path := ""
 onready var text_box := $PareaTextBox
 
-func show_menu() -> void:
-	pass
+func _ready():
+	parea.load_language(path)
 
-func hide_menu() -> void:
-	pass
-
-func show_dialogue(lines: Array) -> void:
+func play(set: String) -> void:
+	var lines: Array = parea.get_lines(set)
 	for line in lines:
-		text_box.add_text(line[TEXT] + "\n")
-
-func hide_dialogue() -> void:
-	pass
+		text_box.add_text(
+			parea.get_name(line) \
+			+ ":\n\t"
+			+ parea.get_text(line) \
+			+ "\n"
+		)

@@ -32,3 +32,15 @@ func get_random_line(set: String) -> Array:
 
 func get_random_set(sets: Array) -> Array:
 	return sets[randi() % len(sets)]
+
+func get_name(line: Array) -> String:
+	return line[NAME]
+
+func get_number(line: Array) -> String:
+	return line[NUMBER]
+
+func get_scene(line: Array) -> String:
+	return line[SCENE]
+
+func get_text(line: Array) -> String:
+	return line[TEXT]

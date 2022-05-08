@@ -1,21 +1,21 @@
 code,name,number,scene,text
-level1/bob0,GRN,0,LEV1,[shake]The name of this node is...[/shake]
-level1/bob1,GRN,1,LEV1,[wave]Green Bob.[/wave]
-level1/bob2,RED,2,LEV1,Yes. His name is Bob.
-level1/bob3,RED,3,LEV1,Me?
-level1/bob4,RED,4,LEV1,I'm just a rando called red Bob.
-level1/bob5,RED,5,LEV1,...
-level1/bob6,RED,6,LEV1,"Ok, bye."
-level1/bob7,NONE,7,LEV1,[rainbow]The end.[/rainbow]
-level1/hello0,RED,0,LEV1,[rainbow]Hello world.[/rainbow]
-level1/hello1,RED,1,LEV1,"[wave]This is a big Big BIG line and
+level1/bob0,Green,0,Level 1,[shake]The name of this node is...[/shake]
+level1/bob1,Green,1,Level 1,[wave]Green Bob.[/wave]
+level1/bob2,Red,2,Level 1,Yes. His name is Bob.
+level1/bob3,Red,3,Level 1,Me?
+level1/bob4,Red,4,Level 1,I'm just a rando called Red Bob.
+level1/bob5,Red,5,Level 1,...
+level1/bob6,Red,6,Level 1,"Ok, bye."
+level1/bob7,None,7,Level 1,[rainbow]The end.[/rainbow]
+level1/hello0,Red,0,Level 1,[rainbow]Hello world.[/rainbow]
+level1/hello1,Red,1,Level 1,"[wave]This is a big Big BIG line and
 has many Many MANY characters.[/wave]"
-level1/hello2,RED,2,LEV1,Thanks for clicking me.
-level1/hello3,RED,3,LEV1,[shake]I love you.[/shake]
-level1/hello4,RED,4,LEV1,Bye.
-level2/greenName0,GRN,0,LEV2,[wave]My name is Green Mominpappa.[/wave]
-level2/greenName1,RED,1,LEV2,[wave]And my name is Red Mominpappa[/wave]
-level2/greenName2,GRN,2,LEV2,Have a nice day.
-level2/redName0,RED,0,LEV2,[rainbow]My name is Red Mominpappa.[/rainbow]
-level2/redName1,GRN,1,LEV2,[rainbow]And my name is Green Mominpappa[/rainbow]
-level2/redName2,RED,2,LEV2,Have a nice day.
+level1/hello2,Red,2,Level 1,Thanks for clicking me.
+level1/hello3,Red,3,Level 1,[shake]I love you.[/shake]
+level1/hello4,Red,4,Level 1,Bye.
+level2/greenName0,Green,0,Level 2,[wave]My name is Green Mominpappa.[/wave]
+level2/greenName1,Red,1,Level 2,[wave]And my name is Red Mominpappa[/wave]
+level2/greenName2,Green,2,Level 2,Have a nice day.
+level2/redName0,Red,0,Level 2,[rainbow]My name is Red Mominpappa.[/rainbow]
+level2/redName1,Green,1,Level 2,[rainbow]And my name is Green Mominpappa[/rainbow]
+level2/redName2,Red,2,Level 2,Have a nice day.
