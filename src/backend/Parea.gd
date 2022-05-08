@@ -37,7 +37,7 @@ func get_random_line(set: String) -> Array:
 	var lines := get_lines(set)
 	return lines[randi() % len(lines)]
 
-func get_random_set(sets: Array) -> Array:
+func get_random_set(sets: Array) -> String:
 	for set in sets:
 		assert(has_set(set), "Set does not exist.")
 	return sets[randi() % len(sets)]

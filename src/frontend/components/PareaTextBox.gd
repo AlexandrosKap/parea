@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 
 func show_text(text: String) -> void:
 	label.bbcode_text = text
+	label.visible_characters = 0
 	label.percent_visible = 0.0
 	set_process(true)
 
@@ -40,3 +41,9 @@ func add_text(text: String) -> void:
 		else:
 			__old_visible_characters = label.visible_characters
 		set_process(true)
+
+func make_text_visible() -> void:
+	label.percent_visible = 1.0
+
+func is_text_visible() -> bool:
+	return label.percent_visible == 1.0
