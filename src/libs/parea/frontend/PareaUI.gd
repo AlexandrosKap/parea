@@ -22,14 +22,24 @@ func _input(event: InputEvent) -> void:
 		else:
 			textbox.make_text_visible()
 
-func play(set: String) -> void:
+func start_playing(new_lines: Array) -> void:
 	number = 0
-	lines = parea.get_lines(set)
+	lines = new_lines
 	show_text(lines[number])
 	set_process_input(true)
 
-func play_random(sets: Array) -> void:
-	play(parea.get_random_set(sets))
+func play_set(set: String) -> void:
+	start_playing(parea.get_lines(set))
+
+func play_random_set(sets: Array) -> void:
+	play_set(parea.get_random_set(sets))
+
+func play_line(code: String) -> void:
+	start_playing([parea.get_line(code)])
+
+func play_random_line(set: String) -> void:
+	var new_lines := parea.get_lines(set)
+	start_playing([new_lines[randi() % len(new_lines)]])
 
 func move_textbox_top() -> void:
 	textbox.move_top()
@@ -49,3 +59,6 @@ func show_text(line: Array) -> void:
 		+ ":  " 
 		+ parea.get_text(line)
 	)
+
+func is_playing() -> bool:
+	return is_processing_input()
