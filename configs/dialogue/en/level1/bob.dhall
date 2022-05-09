@@ -10,7 +10,7 @@ in  [ green "[shake]The name of this node is...[/shake]"
     , red "Yes. His name is Bob."
     , red "Me?"
     , red "I'm just a rando called Red Bob."
-    , red "..."
+    , red "[wave]...[/wave]"
     , red "Ok, bye."
     , none "[rainbow]The end.[/rainbow]"
     ]

@@ -2,11 +2,13 @@ extends Reference
 
 enum {NAME, NUMBER, SCENE, SET, TEXT}
 
+const Utils := preload("res://src/libs/utils/Utils.gd")
+
 var database := {}
 
 func load_language(path: String) -> void:
 	database.clear()
-	for line in preload("./Utils.gd").read_csv(path):
+	for line in Utils.read_csv(path):
 		database[line[0]] = []
 		var is_first := true
 		for value in line:
@@ -19,7 +21,7 @@ func load_language(path: String) -> void:
 func has_set(set: String) -> bool:
 	return database.get(set + "0") != null
 
-func get_line(code: String) -> String:
+func get_line(code: String) -> Array:
 	return database[code]
 
 func get_lines(set: String) -> Array:

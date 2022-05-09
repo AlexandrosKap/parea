@@ -34,7 +34,7 @@ func show_text(text: String) -> void:
 func add_text(text: String) -> void:
 	var err := label.append_bbcode(text)
 	if err:
-		assert(false, "Can't append text.")
+		assert(false, "Can not append text.")
 	else:
 		if label.visible_characters == -1:
 			__old_visible_characters = label.get_total_character_count()
@@ -47,3 +47,12 @@ func make_text_visible() -> void:
 
 func is_text_visible() -> bool:
 	return label.percent_visible == 1.0
+
+func move_top() -> void:
+	alignment = VBoxContainer.ALIGN_BEGIN
+
+func move_mid() -> void:
+	alignment = VBoxContainer.ALIGN_CENTER
+
+func move_bot() -> void:
+	alignment = VBoxContainer.ALIGN_END

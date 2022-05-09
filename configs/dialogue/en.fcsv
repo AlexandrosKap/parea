@@ -4,18 +4,21 @@ level1/bob1,Green,1,Level 1,level1/bob,[wave]Green Bob.[/wave]
 level1/bob2,Red,2,Level 1,level1/bob,Yes. His name is Bob.
 level1/bob3,Red,3,Level 1,level1/bob,Me?
 level1/bob4,Red,4,Level 1,level1/bob,I'm just a rando called Red Bob.
-level1/bob5,Red,5,Level 1,level1/bob,...
+level1/bob5,Red,5,Level 1,level1/bob,[wave]...[/wave]
 level1/bob6,Red,6,Level 1,level1/bob,"Ok, bye."
 level1/bob7,None,7,Level 1,level1/bob,[rainbow]The end.[/rainbow]
-level1/hello0,Red,0,Level 1,level1/hello,[rainbow]Hello world.[/rainbow]
-level1/hello1,Red,1,Level 1,level1/hello,"[wave]This is a big Big BIG line and
-has many Many MANY characters.[/wave]"
+level1/hello0,Red,0,Level 1,level1/hello,[wave]Hello world.[/wave]
+level1/hello1,Red,1,Level 1,level1/hello,"This is a big Big BIG line and
+has many Many MANY characters."
 level1/hello2,Red,2,Level 1,level1/hello,Thanks for clicking me.
 level1/hello3,Red,3,Level 1,level1/hello,[shake]I love you.[/shake]
 level1/hello4,Red,4,Level 1,level1/hello,Bye.
+level1/hello5,Red,5,Level 1,level1/hello,[rainbow]The end.[/rainbow]
 level2/greenName0,Green,0,Level 2,level2/greenName,[wave]My name is Green Mominpappa.[/wave]
-level2/greenName1,Red,1,Level 2,level2/greenName,[wave]And my name is Red Mominpappa[/wave]
+level2/greenName1,Red,1,Level 2,level2/greenName,[shake]And my name is Red Mominpappa[/shake]
 level2/greenName2,Green,2,Level 2,level2/greenName,Have a nice day.
-level2/redName0,Red,0,Level 2,level2/redName,[rainbow]My name is Red Mominpappa.[/rainbow]
-level2/redName1,Green,1,Level 2,level2/redName,[rainbow]And my name is Green Mominpappa[/rainbow]
+level2/greenName3,Green,3,Level 2,level2/greenName,[rainbow]The end.[/rainbow]
+level2/redName0,Red,0,Level 2,level2/redName,[wave]My name is Red Mominpappa.[/wave]
+level2/redName1,Green,1,Level 2,level2/redName,[shake]And my name is Green Mominpappa[/shake]
 level2/redName2,Red,2,Level 2,level2/redName,Have a nice day.
+level2/redName3,Red,3,Level 2,level2/redName,[rainbow]The end.[/rainbow]

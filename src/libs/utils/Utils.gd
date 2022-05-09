@@ -6,11 +6,11 @@ static func read_json(path: String) -> Dictionary:
 	var file := File.new()
 	var err := file.open(path, File.READ)
 	if err:
-		assert(false, "Can't open file.")
+		assert(false, "Can not open file.")
 	else:
 		var json := JSON.parse(file.get_as_text())
 		if json.error:
-			assert(false, "Can't parse file.")
+			assert(false, "Can not parse file.")
 		else:
 			result = json.result
 		file.close()
@@ -22,7 +22,7 @@ static func read_csv(path: String) -> Array:
 	var file := File.new()
 	var err := file.open(path, File.READ)
 	if err:
-		assert(false, "Can't open file.")
+		assert(false, "Can not open file.")
 	else:
 		while not file.eof_reached():
 			var csv_line := file.get_csv_line()
