@@ -23,10 +23,13 @@ let IndexedLine =
 let fromIndexedLineToLine : IndexedLine -> Line =
     \(indexedLine : IndexedLine) ->
         { code = "${Natural/show indexedLine.index}${indexedLine.value.code}"
+        , emotion = indexedLine.value.emotion
         , name = indexedLine.value.name
         , number = indexedLine.index
+        , pause = indexedLine.value.pause
         , scene = indexedLine.value.scene
         , set = indexedLine.value.set
+        , sound = indexedLine.value.sound
         , text = indexedLine.value.text
         }
 
@@ -34,10 +37,13 @@ let addPathToLine : Text -> Line -> Line =
     \(path : Text) ->
     \(line : Line) ->
         { code = "${path}${line.code}"
+        , emotion = line.emotion
         , name = line.name
         , number = line.number
+        , pause = line.pause
         , scene = line.scene
         , set = "${path}"
+        , sound = line.sound
         , text = line.text
         }
 

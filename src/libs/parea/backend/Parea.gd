@@ -1,6 +1,9 @@
 extends Reference
 
-enum {NAME, NUMBER, SCENE, SET, TEXT}
+enum {
+	EMOTION, NAME, NUMBER, PAUSE,
+	SCENE, SET, SOUND, TEXT
+}
 
 const Utils := preload("res://src/libs/utils/Utils.gd")
 
@@ -8,7 +11,8 @@ var database := {}
 
 func load_language(path: String) -> void:
 	database.clear()
-	for line in Utils.read_csv(path):
+	var csv := Utils.read_csv(path)
+	for line in csv:
 		database[line[0]] = []
 		var is_first := true
 		for value in line:
@@ -16,7 +20,7 @@ func load_language(path: String) -> void:
 				is_first = false
 			else:
 				database[line[0]].append(value)
-	assert(len(database), "Failed to load language.")
+	assert(len(csv), "Failed to load language.")
 
 func has_set(set: String) -> bool:
 	return database.get(set + "0") != null
