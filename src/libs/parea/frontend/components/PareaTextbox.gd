@@ -1,8 +1,6 @@
 extends VBoxContainer
 
-# Used for appending text to fix a Godot bug...
-var __old_visible_characters := 0
-
+var __old_visible_characters := 0 # Used for appending text.
 var text_speed := 24.0
 onready var label: RichTextLabel = $Panel/Margin/Label
 

@@ -3,9 +3,9 @@ extends Control
 const Parea := preload("../backend/Parea.gd")
 const PareaTextbox := preload("./components/PareaTextbox.gd")
 
-var parea := Parea.new()
 var number := 0
 var lines := []
+var parea := Parea.new()
 onready var textbox: PareaTextbox = $PareaTextbox
 
 func _ready() -> void:
@@ -28,11 +28,11 @@ func start_playing(new_lines: Array) -> void:
 	show_text(lines[number])
 	set_process_input(true)
 
-func play_set(set: String) -> void:
+func play_lines(set: String) -> void:
 	start_playing(parea.get_lines(set))
 
-func play_random_set(sets: Array) -> void:
-	play_set(parea.get_random_set(sets))
+func play_random_lines(sets: Array) -> void:
+	start_playing(parea.get_random_lines(sets))
 
 func play_line(code: String) -> void:
 	start_playing([parea.get_line(code)])

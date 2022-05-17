@@ -1,11 +1,8 @@
 extends Reference
 
-enum {
-	EMOTION, NAME, NUMBER, PAUSE,
-	SCENE, SET, SOUND, TEXT
-}
-
 const Utils := preload("res://src/libs/utils/Utils.gd")
+
+enum {EMOTION, NAME, NUMBER, PAUSE, SCENE, SET, SOUND, TEXT}
 
 var database := {}
 
@@ -43,10 +40,13 @@ func get_random_line(set: String) -> Array:
 	var lines := get_lines(set)
 	return lines[randi() % len(lines)]
 
-func get_random_set(sets: Array) -> String:
+func get_random_lines(sets: Array) -> Array:
 	for set in sets:
 		assert(has_set(set), "Set does not exist.")
-	return sets[randi() % len(sets)]
+	return get_lines(sets[randi() % len(sets)])
+
+func get_emotion(line: Array) -> String:
+	return line[EMOTION]
 
 func get_name(line: Array) -> String:
 	return line[NAME]
@@ -54,11 +54,17 @@ func get_name(line: Array) -> String:
 func get_number(line: Array) -> String:
 	return line[NUMBER]
 
+func get_pause(line: Array) -> String:
+	return line[PAUSE]
+
 func get_scene(line: Array) -> String:
 	return line[SCENE]
 
 func get_set(line: Array) -> String:
 	return line[SET]
+
+func get_sound(line: Array) -> String:
+	return line[SOUND]
 
 func get_text(line: Array) -> String:
 	return line[TEXT]
