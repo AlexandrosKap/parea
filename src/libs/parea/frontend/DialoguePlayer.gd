@@ -1,12 +1,15 @@
 extends Control
 
 const Parea := preload("../backend/Parea.gd")
-const PareaTextbox := preload("./components/PareaTextbox.gd")
+const DPTextbox := preload("./components/DPTextbox.gd")
+
+signal started
+signal ended
 
 var number := 0
 var lines := []
 var parea := Parea.new()
-onready var textbox: PareaTextbox = $PareaTextbox
+onready var textbox: DPTextbox = $DPTextbox
 
 func _ready() -> void:
 	set_process_input(false)
@@ -17,6 +20,7 @@ func _input(event: InputEvent) -> void:
 			number += 1
 			if number >= len(lines):
 				set_process_input(false)
+				emit_signal("ended")
 			else:
 				show_text(lines[number])
 		else:
@@ -27,6 +31,7 @@ func start_playing(new_lines: Array) -> void:
 	lines = new_lines
 	show_text(lines[number])
 	set_process_input(true)
+	emit_signal("started")
 
 func play_lines(set: String) -> void:
 	start_playing(parea.get_lines(set))
@@ -55,8 +60,9 @@ func load_language(path: String) -> void:
 
 func show_text(line: Array) -> void:
 	textbox.show_text(
-		parea.get_name(line)
-		+ ":  " 
+		"[color=red]"
+		+ parea.get_name(line)
+		+ ":  [/color]"
 		+ parea.get_text(line)
 	)
 

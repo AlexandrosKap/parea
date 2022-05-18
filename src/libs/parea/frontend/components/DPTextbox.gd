@@ -2,7 +2,7 @@ extends VBoxContainer
 
 var __old_visible_characters := 0 # Used for appending text.
 var text_speed := 24.0
-onready var label: RichTextLabel = $Panel/Margin/Label
+onready var label: RichTextLabel = $Panel/Margin/HBox/Label
 
 # Hide default text.
 func _ready() -> void:

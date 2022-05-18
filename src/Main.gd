@@ -1,16 +1,16 @@
 extends Control
 
-const PareaUI := preload("res://src/libs/parea/frontend/PareaUI.gd")
+const DialoguePlayer := preload("res://src/libs/parea/frontend/DialoguePlayer.gd")
 
 var sets := ["level1/bob", "level1/hello", "level2/greenName", "level2/theory"]
-onready var ui: PareaUI = $PareaUI
+onready var ui: DialoguePlayer = $DialoguePlayer
 
 func _ready() -> void:
-	randomize()
 	ui.move_textbox_mid()
 	ui.load_language("res://configs/dialogue/en.fcsv")
-	ui.play_line(sets[3] + "5")
+	ui.play_lines(sets[1])
+	var err := ui.connect("ended", self, "_on_DialoguePlayer_ended")
+	assert(err == 0)
 
-func _input(event: InputEvent) -> void:
-	if not ui.is_playing() and event.is_action_pressed("ui_accept"):
-		ui.play_random_line(sets[3])
+func _on_DialoguePlayer_ended() -> void:
+	ui.play_lines(sets[1])
