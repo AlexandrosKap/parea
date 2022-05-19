@@ -59,12 +59,8 @@ func load_language(path: String) -> void:
 	parea.load_language(path)
 
 func show_text(line: Array) -> void:
-	textbox.show_text(
-		"[color=red]"
-		+ parea.get_name(line)
-		+ ":  [/color]"
-		+ parea.get_text(line)
-	)
+	textbox.show_name(parea.get_name(line))
+	textbox.show_text(parea.get_text(line))
 
 func is_playing() -> bool:
 	return is_processing_input()
