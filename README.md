@@ -5,6 +5,8 @@ This project is part of another project called Volta.
 
 Godot version: 3.4.4
 
+![parea1](https://raw.githubusercontent.com/AlexandrosKap/volta-pictures/main/parea1.png)
+
 ## Basic Features
 
 - [x] Representation of the line

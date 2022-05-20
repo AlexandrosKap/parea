@@ -8,8 +8,7 @@ level1/bob5,,Red,5,0.0,Level 1,level1/bob,,[wave]...[/wave]
 level1/bob6,,Red,6,0.0,Level 1,level1/bob,,"Ok, bye."
 level1/bob7,,None,7,0.0,Level 1,level1/bob,,[rainbow]The end.[/rainbow]
 level1/hello0,,Red,0,0.0,Level 1,level1/hello,,[wave]Hello world.[/wave]
-level1/hello1,,Red,1,0.0,Level 1,level1/hello,,"This is a big Big BIG line and
-has many Many MANY characters."
+level1/hello1,,Red,1,0.0,Level 1,level1/hello,,This is a big Big BIG line and has many Many MANY characters.
 level1/hello2,,Red,2,0.0,Level 1,level1/hello,,Thanks for clicking me.
 level1/hello3,,Red,3,0.0,Level 1,level1/hello,,[shake]I love you.[/shake]
 level1/hello4,,Red,4,0.0,Level 1,level1/hello,,Bye.
