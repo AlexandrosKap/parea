@@ -27,7 +27,7 @@ main() {
                 has_files='1'
                 line_path="${file#$dir/}"
                 line_path="${line_path%.dhall}"
-                echo "(newLineSet \"$line_path\"" >> $temp
+                echo "(newLineSet \"$line_path\" \"${line_path%/*}\"" >> $temp
                 dhall --file $file >> $temp
                 echo ')#' >> $temp
                 echo "Normalized: $file"

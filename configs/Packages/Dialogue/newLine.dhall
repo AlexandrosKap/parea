@@ -1,7 +1,6 @@
 let Line = ./Line.dhall
 
-let newLine : Text -> Text -> Text -> Line =
-    \(scene : Text) ->
+let newLine : Text -> Text -> Line =
     \(name  : Text) ->
     \(text  : Text) ->
         { code = ""
@@ -9,7 +8,7 @@ let newLine : Text -> Text -> Text -> Line =
         , name
         , number = 0
         , pause = 0.0
-        , scene
+        , scene = ""
         , set = ""
         , sound = ""
         , text

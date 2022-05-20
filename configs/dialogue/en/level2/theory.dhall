@@ -1,6 +1,6 @@
 let pack = ../../package.dhall
 
-let say = pack.newLine "${pack.scenes.level2}"
+let say = pack.newLine
 let john = say "${pack.names.john}"
 
 in  [ john "The cows..."

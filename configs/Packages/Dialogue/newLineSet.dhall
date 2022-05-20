@@ -33,24 +33,26 @@ let fromIndexedLineToLine : IndexedLine -> Line =
         , text = indexedLine.value.text
         }
 
-let addPathToLine : Text -> Line -> Line =
-    \(path : Text) ->
+let addSetAndSceneToLine : Text -> Text -> Line -> Line =
+    \(set : Text) ->
+    \(scene : Text) -> 
     \(line : Line) ->
-        { code = "${path}${line.code}"
+        { code = "${set}${line.code}"
         , emotion = line.emotion
         , name = line.name
         , number = line.number
         , pause = line.pause
-        , scene = line.scene
-        , set = "${path}"
+        , scene
+        , set
         , sound = line.sound
         , text = line.text
         }
 
-let newLineSet : Text -> List Line -> List Line =
-    \(path : Text) ->
+let newLineSet : Text -> Text -> List Line -> List Line =
+    \(set : Text) ->
+    \(scene : Text) ->
     \(lines : List Line) ->
-        let addPathToLine = addPathToLine path
+        let addSetAndSceneToLine = addSetAndSceneToLine set scene
 
         let part1 =
             map
@@ -63,7 +65,7 @@ let newLineSet : Text -> List Line -> List Line =
             map
             Line
             Line
-            addPathToLine
+            addSetAndSceneToLine
             part1
 
         in  part2
