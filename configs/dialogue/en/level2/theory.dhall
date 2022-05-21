@@ -1,7 +1,8 @@
-let pack = ../../package.dhall
+let pack = ../../Package/package.dhall
+let names = pack.names
+let emotions = pack.emotions
 
-let say = pack.newLine
-let john = say "${pack.names.john}"
+let john = pack.say names.john emotions.none
 
 in  [ john "The cows..."
     , john "No. They did it."

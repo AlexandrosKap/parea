@@ -1,7 +1,8 @@
-let pack = ../../package.dhall
+let pack = ../../Package/package.dhall
+let names = pack.names
+let emotions = pack.emotions
 
-let say = pack.newLine
-let red = say "${pack.names.red}"
+let red = pack.say names.red emotions.none
 
 in  [ red "[wave]Hello world.[/wave]"
     , red "This is a big Big BIG line and has many Many MANY characters."

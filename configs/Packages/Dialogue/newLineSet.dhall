@@ -33,7 +33,7 @@ let fromIndexedLineToLine : IndexedLine -> Line =
         , text = indexedLine.value.text
         }
 
-let addSetAndSceneToLine : Text -> Text -> Line -> Line =
+let addSetAndScene : Text -> Text -> Line -> Line =
     \(set : Text) ->
     \(scene : Text) -> 
     \(line : Line) ->
@@ -52,7 +52,7 @@ let newLineSet : Text -> Text -> List Line -> List Line =
     \(set : Text) ->
     \(scene : Text) ->
     \(lines : List Line) ->
-        let addSetAndSceneToLine = addSetAndSceneToLine set scene
+        let addSetAndScene = addSetAndScene set scene
 
         let part1 =
             map
@@ -65,7 +65,7 @@ let newLineSet : Text -> Text -> List Line -> List Line =
             map
             Line
             Line
-            addSetAndSceneToLine
+            addSetAndScene
             part1
 
         in  part2

@@ -1,16 +1,19 @@
 let Line = ./Line.dhall
 
-let newLine : Text -> Text -> Line =
+let newLine : Double -> Text -> Text -> Text -> Text -> Line =
+    \(pause : Double) ->
+    \(sound : Text) ->
     \(name  : Text) ->
+    \(emotion : Text) ->
     \(text  : Text) ->
         { code = ""
-        , emotion = ""
+        , emotion
         , name
         , number = 0
-        , pause = 0.0
+        , pause
         , scene = ""
         , set = ""
-        , sound = ""
+        , sound
         , text
         }
 
