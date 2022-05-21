@@ -2,7 +2,7 @@ extends Reference
 
 const Utils := preload("res://src/libs/utils/Utils.gd")
 
-enum {EMOTION, NAME, NUMBER, PAUSE, SCENE, SET, SOUND, TEXT}
+enum {EMOTION, NAME, NUMBER, PAUSE_END, PAUSE_START, SCENE, SET, SOUND, TEXT}
 
 var database := {}
 
@@ -54,8 +54,11 @@ func get_name(line: Array) -> String:
 func get_number(line: Array) -> String:
 	return line[NUMBER]
 
-func get_pause(line: Array) -> String:
-	return line[PAUSE]
+func get_pause_end(line: Array) -> String:
+	return line[PAUSE_END]
+
+func get_pause_start(line: Array) -> String:
+	return line[PAUSE_START]
 
 func get_scene(line: Array) -> String:
 	return line[SCENE]

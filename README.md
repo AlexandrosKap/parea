@@ -20,14 +20,15 @@ Godot version: 3.4.4
 
 ## Line Data
 ```dhall
-{ code    : Text
-, emotion : Text
-, name    : Text
-, number  : Natural
-, pause   : Double
-, scene   : Text
-, set     : Text
-, sound   : Text
-, text    : Text
+{ code       : Text
+, emotion    : Text
+, name       : Text
+, number     : Natural
+, pauseEnd   : Double
+, pauseStart : Double
+, scene      : Text
+, set        : Text
+, sound      : Text
+, text       : Text
 }
 ```
