@@ -3,7 +3,7 @@
 # Create a csv file for every directory in the dialogue directory.
 # The dialogue directory must have a package directory with a package.dhall file.
 # The extension of the csv file can be changed if needed.
-# Add dhall and dhall-to-csv to your path before running this script.
+# Add dhall-to-csv to your path before running this script.
 
 collect='./scripts/collect.sh'
 dialogue='./dialogue'
@@ -28,10 +28,7 @@ main() {
                 has_files='1'
                 line_path="${file#$dir/}"
                 line_path="${line_path%.dhall}"
-                echo "(newLineSet \"$line_path\" \"${line_path%/*}\"" >> $temp
-                dhall --file $file >> $temp
-                echo ')#' >> $temp
-                echo "Normalized: $file"
+                echo "(newLineSet \"$line_path\" \"${line_path%/*}\" (../$file))#" >> $temp
             done
             echo '([ ] : List Line)' >> $temp
 
