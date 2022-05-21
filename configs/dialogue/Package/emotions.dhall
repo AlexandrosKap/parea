@@ -1,4 +1,4 @@
-{ none      = "none"
+{ none      = ""
 , scared    = "scared"
 , happy     = "happy"
 , sick      = "sick"

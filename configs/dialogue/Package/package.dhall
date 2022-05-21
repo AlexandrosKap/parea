@@ -6,8 +6,8 @@ let Line = pack.Line
 let newLine = pack.newLine
 let newLineSet = pack.newLineSet
 
-let say = newLine 0.0 "none"
-let none = say names.none emotions.none
+let say = newLine 0.0 0.0
+let print = say ""
 
 in  { Line
     , newLine
@@ -15,5 +15,5 @@ in  { Line
     , emotions
     , names
     , say
-    , none
+    , print
     }

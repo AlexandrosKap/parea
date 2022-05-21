@@ -2,7 +2,7 @@ let pack = ../../Package/package.dhall
 let names = pack.names
 let emotions = pack.emotions
 
-let john = pack.say names.john emotions.none
+let john = pack.print names.john emotions.none
 
 in  [ john "The cows..."
     , john "No. They did it."

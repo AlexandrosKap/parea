@@ -26,7 +26,8 @@ let fromIndexedLineToLine : IndexedLine -> Line =
         , emotion = indexedLine.value.emotion
         , name = indexedLine.value.name
         , number = indexedLine.index
-        , pause = indexedLine.value.pause
+        , pauseEnd = indexedLine.value.pauseEnd
+        , pauseStart = indexedLine.value.pauseStart
         , scene = indexedLine.value.scene
         , set = indexedLine.value.set
         , sound = indexedLine.value.sound
@@ -41,7 +42,8 @@ let addSetAndScene : Text -> Text -> Line -> Line =
         , emotion = line.emotion
         , name = line.name
         , number = line.number
-        , pause = line.pause
+        , pauseEnd = line.pauseEnd
+        , pauseStart = line.pauseStart
         , scene
         , set
         , sound = line.sound
