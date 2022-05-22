@@ -22,29 +22,31 @@ func _input(event: InputEvent) -> void:
 				set_process_input(false)
 				emit_signal("ended")
 			else:
-				show_text(lines[number])
+				show_line(lines[number])
 		else:
 			textbox.make_text_visible()
 
-func start_playing(new_lines: Array) -> void:
+func _process(delta: float) -> void:
+	pass # Adding watch code later for animation style dialogue.
+
+func start(new_lines: Array) -> void:
 	number = 0
 	lines = new_lines
-	show_text(lines[number])
+	show_line(lines[number])
 	set_process_input(true)
 	emit_signal("started")
 
-func play_lines(set: String) -> void:
-	start_playing(parea.get_lines(set))
+func play(set: String) -> void:
+	start(parea.get_lines(set))
 
-func play_random_lines(sets: Array) -> void:
-	start_playing(parea.get_random_lines(sets))
+func watch(set: String) -> void:
+	start(parea.get_lines(set))
 
-func play_line(code: String) -> void:
-	start_playing([parea.get_line(code)])
+func play_random(sets: Array) -> void:
+	start(parea.get_random_lines(sets))
 
-func play_random_line(set: String) -> void:
-	var new_lines := parea.get_lines(set)
-	start_playing([new_lines[randi() % len(new_lines)]])
+func watch_random(sets: Array) -> void:
+	start(parea.get_random_lines(sets))
 
 func move_textbox_top() -> void:
 	textbox.move_top()
@@ -58,7 +60,7 @@ func move_textbox_bot() -> void:
 func load_language(path: String) -> void:
 	parea.load_language(path)
 
-func show_text(line: Array) -> void:
+func show_line(line: Array) -> void:
 	textbox.show_name(parea.get_name(line))
 	textbox.show_text(parea.get_text(line))
 

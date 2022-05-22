@@ -6,14 +6,17 @@ let Line = pack.Line
 let newLine = pack.newLine
 let newLineSet = pack.newLineSet
 
-let say = newLine 0.0 0.0
-let print = say ""
+-- Helper functions to prevent repetition.
+let do = newLine 0.0 0.0
+let say = newLine 0.0 0.0 ""
+let print = newLine 0.0 0.0 "" ""
 
 in  { Line
     , newLine
     , newLineSet
     , emotions
     , names
+    , do
     , say
     , print
     }

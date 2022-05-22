@@ -1,5 +1,6 @@
 { code       : Text
 , emotion    : Text
+, event      : Text
 , name       : Text
 , number     : Natural
 , pauseEnd   : Double

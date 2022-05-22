@@ -2,7 +2,13 @@ extends Reference
 
 const Utils := preload("res://src/libs/utils/Utils.gd")
 
-enum {EMOTION, NAME, NUMBER, PAUSE_END, PAUSE_START, SCENE, SET, SOUND, TEXT}
+enum {
+	EMOTION, EVENT,
+	NAME, NUMBER,
+	PAUSE_END, PAUSE_START,
+	SCENE, SET, SOUND,
+	TEXT
+}
 
 var database := {}
 

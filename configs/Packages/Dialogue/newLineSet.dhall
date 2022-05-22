@@ -24,6 +24,7 @@ let fromIndexedLineToLine : IndexedLine -> Line =
     \(indexedLine : IndexedLine) ->
         { code = "${Natural/show indexedLine.index}${indexedLine.value.code}"
         , emotion = indexedLine.value.emotion
+        , event = indexedLine.value.event
         , name = indexedLine.value.name
         , number = indexedLine.index
         , pauseEnd = indexedLine.value.pauseEnd
@@ -40,6 +41,7 @@ let addSetAndScene : Text -> Text -> Line -> Line =
     \(line : Line) ->
         { code = "${set}${line.code}"
         , emotion = line.emotion
+        , event = line.event
         , name = line.name
         , number = line.number
         , pauseEnd = line.pauseEnd

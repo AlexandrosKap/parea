@@ -22,6 +22,7 @@ Godot version: 3.4.4
 ```dhall
 { code       : Text
 , emotion    : Text
+, event      : Text
 , name       : Text
 , number     : Natural
 , pauseEnd   : Double
