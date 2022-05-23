@@ -1,8 +1,7 @@
-let Line = ./Line.dhall
-let newLine = ./newLine.dhall
-let newLineSet = ./newLineSet.dhall
-
-in  { Line
-    , newLine
-    , newLineSet
-    }
+{ Line = ./Line.dhall
+, newLine = ./newLine.dhall
+, newLineSet = ./newLineSet.dhall
+, do = ./do.dhall
+, say = ./say.dhall
+, print = ./print.dhall
+}
